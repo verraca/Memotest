@@ -6,7 +6,14 @@ const contraCara = "./imgs/ada.png"
 var procesando= false
 
 var aciertos= 0
+var turnosRestantes = 11;
 
+$(".boton").on("click", function(){
+const nombre = $("#name").val();
+const mostrarNombre = "<p> Hola " + nombre + " Empeza a jugar! </p>";
+const bienvenida = $(".bienvenida");
+bienvenida.append(mostrarNombre);
+})
 
 function shuffle(a) {
     for (let i = a.length - 1; i > 0; i--) {
