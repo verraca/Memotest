@@ -29,5 +29,20 @@ img{
     width: 800px;
     flex-wrap: wrap;
 }
-    
 
+#turnos{
+    width: auto;
+    height: auto;
+    background-color: blanchedalmond;
+    font-style: inherit;
+    font-size:20px;
+}
+
+.bienvenida{  
+    width: auto;
+    height: auto;
+    background-color: blanchedalmond;
+    font-style: inherit;
+    font-size: 20px;
+}
+    

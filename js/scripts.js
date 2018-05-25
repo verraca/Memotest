@@ -9,9 +9,11 @@ var aciertos= 0
 
 $(".boton").on("click", function(){
 const nombre = $("#name").val();
-const mostrarNombre = "<p> Hola " + nombre + " Empeza a jugar! </p>";
+const mostrarNombre = "<p> Hola " + nombre + " empeza a jugar! </p>";
 const bienvenida = $(".bienvenida");
 bienvenida.append(mostrarNombre);
+$(".boton").hide();
+$("#name").hide()
 })
 
 function shuffle(a) {
@@ -67,7 +69,7 @@ function darVueltaCarta(){
 
 };
 
-var turnosResantes = 11;
+var turnosResantes = 16;
 
 function verificarTurno(){
         turnosResantes = turnosResantes - 1;
