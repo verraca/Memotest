@@ -6,7 +6,6 @@ const contraCara = "./imgs/ada.png"
 var procesando= false
 
 var aciertos= 0
-var turnosRestantes = 11;
 
 $(".boton").on("click", function(){
 const nombre = $("#name").val();
@@ -25,7 +24,6 @@ function shuffle(a) {
 
 cartas= shuffle(cartas);
 
-$(".card").click(darVueltaCarta);
 
 function darVueltaCarta(){
     var cardId = $(this).attr("id")
@@ -48,6 +46,8 @@ function darVueltaCarta(){
             setTimeout(function(){
             alert("WE ARE THE CHAMPIONS, MY FRIEND")
         },500)
+        }else{
+            verificarTurno();
         }
 
 
@@ -58,12 +58,26 @@ function darVueltaCarta(){
             $("#" + cardId).find("img").attr("src",contraCara)
             $("#" + cartaDadaVuelta).find("img").attr("src",contraCara)
             cartaDadaVuelta="ninguna"
+            verificarTurno();
             procesando= false
         },500)
      
     }  
 
 };
+
+var turnosResantes = 11;
+
+function verificarTurno(){
+        turnosResantes = turnosResantes - 1;
+        if(turnosResantes<=0){
+            $('#turnos').text("No te quedan intentos.");
+            alert("Perdiste!");
+            return;
+        }
+        $('#turnos').text("Quedan "+turnosResantes+" intentos.")
+}
+verificarTurno();
 
 
 
