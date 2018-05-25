@@ -24,6 +24,7 @@ function shuffle(a) {
 
 cartas= shuffle(cartas);
 
+$(".card").click(darVueltaCarta);
 
 function darVueltaCarta(){
     var cardId = $(this).attr("id")
