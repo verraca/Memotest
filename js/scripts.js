@@ -7,15 +7,6 @@ var procesando= false
 
 var aciertos= 0
 
-$(".boton").on("click", function(){
-const nombre = $("#name").val();
-const mostrarNombre = "<p> Hola " + nombre + " empeza a jugar! </p>";
-const bienvenida = $(".bienvenida");
-bienvenida.append(mostrarNombre);
-$(".boton").hide();
-$("#name").hide()
-})
-
 function shuffle(a) {
     for (let i = a.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
